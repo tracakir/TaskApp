@@ -1,0 +1,25 @@
+.task-app {
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+}
+.task-app__form {
+	width: 300px;
+}
+.task-app__form__row {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.task-app__form__row label {
+	font-weight: 600;
+}
+.task-app__items {
+	border-collapse: collapse;
+	border: 1px solid grey;
+}
+.task-app__items td,
+.task-app__items th {
+	padding: 10px;
+	border: 1px solid grey;
+}

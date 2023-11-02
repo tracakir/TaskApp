@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div class="task-app">
+		<form id="form" class="task-app__form">
+			<div class="task-app__form__row">
+				<label for="title">Title</label>
+				<input type="text" name="title" id="title" placeholder="Enter task title ...">
+			</div>
+			<div class="task-app__form__row">
+				<label for="desc">Description</label>
+				<input type="text" name="desc" id="desc" placeholder="Enter task desc ...">
+			</div>
+			<div class="task-app__form__row">
+				<label for="categories">Category</label>
+				<select name="categories" id="categories" multiple>
+					<option value="">Select category</option>
+					<option value="1">Frontend</option>
+					<option value="2">UI</option>
+					<option value="3">Javascript</option>
+				</select>
+			</div>
+			<div class="task-app__form__row">
+				<label for="users">User</label>
+				<select name="users" id="users">
+					<option value="">Select user</option>
+					<option value="1">John</option>
+					<option value="2">Jack</option>
+					<option value="3">Marry</option>
+				</select>
+			</div>
+			<div class="task-app__form__row">
+				<button type="submit">Add</button>
+			</div>
+		</form>
+		<select id="selectOptions" name="cars" multiple>
+
+			<option value="volvo">Volvo</option>
+			<option value="saab">Saab</option>
+			<option value="opel">Opel</option>
+			<option value="audi">Audi</option>
+
+		</select>
+
+		<button onclick="myFunction()">Show Selects</button>
+
+
+		<div class="task-app__body">
+			<table class="task-app__items">
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Description</th>
+						<th>Created</th>
+						<th>Category</th>
+						<th>User</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody id="tableMain +">
+					<tr id="taskROW--ow">
+						<td>Task Title</td>
+						<td>Description</td>
+						<td>1.11.2023 13:00</td>
+						<td>
+							<a href="#">Frontend</a>
+							<a href="#">UI</a>
+							<a href="#">Javascript</a>
+						</td>
+						<td>
+							<a href="#">John</a>
+							<a href="#">Jack</a>
+							<a href="#">Marry</a>
+						</td>
+						<td>
+							<a href="#">Delete</a>
+							<a href="#">Done</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</body>
+
+</html>
