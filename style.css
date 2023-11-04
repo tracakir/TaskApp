@@ -14,12 +14,12 @@
 .task-app__form__row label {
 	font-weight: 600;
 }
-.task-app__items {
+.task-app__table {
 	border-collapse: collapse;
 	border: 1px solid grey;
 }
-.task-app__items td,
-.task-app__items th {
+.task-app__table td,
+.task-app__table th {
 	padding: 10px;
 	border: 1px solid grey;
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +7,20 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js"></script>
 </head>
-
 <body>
 	<div class="task-app">
-		<form id="form" class="task-app__form">
+		<form class="task-app__form">
 			<div class="task-app__form__row">
 				<label for="title">Title</label>
-				<input type="text" name="title" id="title" placeholder="Enter task title ...">
+				<input type="text" name="title" id="title" placeholder="Enter task title ..." required>
 			</div>
 			<div class="task-app__form__row">
 				<label for="desc">Description</label>
-				<input type="text" name="desc" id="desc" placeholder="Enter task desc ...">
+				<input type="text" name="desc" id="desc" placeholder="Enter task desc ..."required>
 			</div>
 			<div class="task-app__form__row">
 				<label for="categories">Category</label>
-				<select name="categories" id="categories" multiple>
+				<select name="categories" id="categories"required multiple>
 					<option value="">Select category</option>
 					<option value="1">Frontend</option>
 					<option value="2">UI</option>
@@ -31,7 +29,7 @@
 			</div>
 			<div class="task-app__form__row">
 				<label for="users">User</label>
-				<select name="users" id="users">
+				<select name="users" id="users"required multiple>
 					<option value="">Select user</option>
 					<option value="1">John</option>
 					<option value="2">Jack</option>
@@ -42,20 +40,8 @@
 				<button type="submit">Add</button>
 			</div>
 		</form>
-		<select id="selectOptions" name="cars" multiple>
-
-			<option value="volvo">Volvo</option>
-			<option value="saab">Saab</option>
-			<option value="opel">Opel</option>
-			<option value="audi">Audi</option>
-
-		</select>
-
-		<button onclick="myFunction()">Show Selects</button>
-
-
 		<div class="task-app__body">
-			<table class="task-app__items">
+			<table class="task-app__table">
 				<thead>
 					<tr>
 						<th>Title</th>
@@ -66,8 +52,8 @@
 						<th>Action</th>
 					</tr>
 				</thead>
-				<tbody id="tableMain +">
-					<tr id="taskROW--ow">
+				<tbody id="task-app_table_body">
+					<tr>
 						<td>Task Title</td>
 						<td>Description</td>
 						<td>1.11.2023 13:00</td>
@@ -92,5 +78,4 @@
 	</div>
 
 </body>
-
 </html>
