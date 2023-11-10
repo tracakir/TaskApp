@@ -10,80 +10,90 @@
 </head>
 
 <body>
-	<div class="task-app">
-		<form class="task-app__form">
-			<div class="task-app__form__row">
-				<label for="title">Title</label>
-				<input type="text" name="title" id="title" placeholder="Enter task title ..." required>
+	<div class="task-app__wrapper">
+		<div class="task-app__filter">
+			<h1>TASK APP</h1>
+			<div class="task-app__filter__buttons">
+				<button class="active">ALL</button>
+				<button id="waiting-button">WAITING</button>
+				<button id="completed-button">COMPLETED</button>
 			</div>
-			<div class="task-app__form__row">
-				<label for="desc">Description</label>
-				<input type="text" name="desc" id="desc" placeholder="Enter task desc ..." required>
-			</div>
-			<div class="task-app__form__row">
-				<label for="categories">Category</label>
-				<select name="categories" id="categories" required multiple>
-					<option value="">Select category</option>
-					<option value="1">Frontend</option>
-					<option value="2">UI</option>
-					<option value="3">Javascript</option>
-				</select>
-			</div>
-			<div class="task-app__form__row">
-				<label for="users">User</label>
-				<select name="users" id="users" required multiple>
-					<option value="">Select user</option>
-					<option value="1">John</option>
-					<option value="2">Jack</option>
-					<option value="3">Marry</option>
-				</select>
-			</div>
-			<div class="task-app__form__row">
-				<button type="submit">Add</button>
-			</div>
-		</form>
-		<div style="display: flex; flex-direction: column;">
-			<div class="task-app__header">
-				<h1>Task App Table</h1>
-			</div>
-			<div class="task-app__body">
-				<table class="task-app__table">
-					<thead>
-						<tr>
-							<th>Title</th>
-							<th>Description</th>
-							<th>Created</th>
-							<th>Category</th>
-							<th>User</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody id="task-app_table_body">
-						<tr>
-							<td>Task Title</td>
-							<td>Description</td>
-							<td>1.11.2023 13:00</td>
-							<td>
-								<a href="#">Frontend</a>
-								<a href="#">UI</a>
-								<a href="#">Javascript</a>
-							</td>
-							<td>
-								<a href="#">John</a>
-								<a href="#">Jack</a>
-								<a href="#">Marry</a>
-							</td>
-							<td>
-								<a href="#">Delete</a>
-								<a href="#">Done</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+
+		</div>
+		<div class="task-app">
+			<form class="task-app__form">
+				<div class="task-app__form__row">
+					<label for="title">Title</label>
+					<input type="text" name="title" id="title" placeholder="Enter task title ..." required>
+				</div>
+				<div class="task-app__form__row">
+					<label for="desc">Description</label>
+					<input type="text" name="desc" id="desc" placeholder="Enter task desc ..." required>
+				</div>
+				<div class="task-app__form__row">
+					<label for="categories">Category</label>
+					<select name="categories" id="categories" required multiple>
+						<option value="">Select category</option>
+						<option value="1">Frontend</option>
+						<option value="2">UI</option>
+						<option value="3">Javascript</option>
+					</select>
+				</div>
+				<div class="task-app__form__row">
+					<label for="users">User</label>
+					<select name="users" id="users" required multiple>
+						<option value="">Select user</option>
+						<option value="1">John</option>
+						<option value="2">Jack</option>
+						<option value="3">Marry</option>
+					</select>
+				</div>
+				<div class="task-app__form__row">
+					<button type="submit">Add</button>
+				</div>
+			</form>
+			<div style="display: flex; flex-direction: column;">
+				<div class="task-app__header">
+					<h2>Task App Table</h2>
+				</div>
+				<div class="task-app__body">
+					<table class="task-app__table">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Description</th>
+								<th>Created</th>
+								<th>Category</th>
+								<th>User</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody id="task-app_table_body">
+							<tr>
+								<td>Task Title</td>
+								<td>Description</td>
+								<td>1.11.2023 13:00</td>
+								<td>
+									<a href="#">Frontend</a>
+									<a href="#">UI</a>
+									<a href="#">Javascript</a>
+								</td>
+								<td>
+									<a href="#">John</a>
+									<a href="#">Jack</a>
+									<a href="#">Marry</a>
+								</td>
+								<td>
+									<a href="#">Delete</a>
+									<a href="#">Done</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
-
 </body>
 
 </html>

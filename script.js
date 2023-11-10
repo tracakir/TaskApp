@@ -142,6 +142,10 @@ addEventListener("DOMContentLoaded", (event) => {
         task.completed = !task.completed;
         createRow(dataTasks);
       };
+      if (task.completed) {
+        row.style.textDecoration = "line-through";
+      }
+
       tdTitle.innerText = task.title.toUpperCase();
       tdDesc.innerText = task.desc;
       tdCreated.innerText = task.created;
@@ -164,11 +168,13 @@ addEventListener("DOMContentLoaded", (event) => {
       row.appendChild(tdUser);
       row.appendChild(tdActions);
       tableBody.appendChild(row);
-
-      if (task.completed) {
-        row.style.textDecoration = "line-through";
-      }
     });
   }
   createRow();
+
+  const completedButton = document.getElementById("completed-button");
+  completedButton.addEventListener("click", function () {
+    const completedTasks = dataTasks.filter((task) => task.completed);
+    createRow(completedTasks);
+  });
 });

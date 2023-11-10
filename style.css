@@ -2,12 +2,10 @@
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  justify-content: center;
-  height: 100vh;
-  align-items: center;
 }
 .task-app__form {
   width: 300px;
+  margin-top: 10px;
 }
 .task-app__form__row {
   display: flex;
@@ -30,7 +28,33 @@
   gap: 50px;
   display: flex;
 }
-h1 {
+h2 {
   margin: 0;
   padding-bottom: 10px;
+}
+.task-app__filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.task-app__wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.task-app__filter__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.task-app__filter__buttons button {
+  padding: 7px 25px;
+}
+.active {
+  background-color: aqua;
 }
