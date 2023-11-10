@@ -1,25 +1,36 @@
 .task-app {
-	display: flex;
-	align-items: flex-start;
-	gap: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
 }
 .task-app__form {
-	width: 300px;
+  width: 300px;
 }
 .task-app__form__row {
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .task-app__form__row label {
-	font-weight: 600;
+  font-weight: 600;
 }
 .task-app__table {
-	border-collapse: collapse;
-	border: 1px solid grey;
+  border-collapse: collapse;
+  border: 1px solid grey;
 }
 .task-app__table td,
 .task-app__table th {
-	padding: 10px;
-	border: 1px solid grey;
+  padding: 10px;
+  border: 1px solid grey;
+}
+.task-app_table_body > tr > td {
+  gap: 50px;
+  display: flex;
+}
+h1 {
+  margin: 0;
+  padding: ;
 }
