@@ -25,7 +25,7 @@ addEventListener("DOMContentLoaded", (event) => {
       created: "Sat Now 04 2023 15:44:24 GMT+0300 (GMT+03:00)",
       categories: [3],
       users: [2],
-      completed: false,
+      completed: true,
     },
     {
       id: 3857840975,
@@ -142,19 +142,6 @@ addEventListener("DOMContentLoaded", (event) => {
         task.completed = !task.completed;
         createRow(dataTasks);
       };
-      actionDone.onclick = function (event) {
-        console.log(task.id);
-      };
-      let completed = false;
-      actionDone.onclick = function (event) {
-        const done = dataTasks.find((b) => {
-          return b.id === task.id;
-        });
-        const row = actionDone.closest("tr");
-        completed = !completed;
-        row.style.textDecoration = completed ? "line-through" : "none";
-      };
-
       tdTitle.innerText = task.title.toUpperCase();
       tdDesc.innerText = task.desc;
       tdCreated.innerText = task.created;
