@@ -1,4 +1,5 @@
 addEventListener("DOMContentLoaded", (event) => {
+  let selectedCategory = "all";
   const dataTasks = [
     {
       id: 2545000624,
@@ -77,7 +78,17 @@ addEventListener("DOMContentLoaded", (event) => {
       surname: "Doe",
     },
   ];
-
+  // Category>
+  wbuttons = document.querySelectorAll("#categoryButtons button");
+  wbuttons.forEach((element) =>
+    element.addEventListener("click", (event) => {
+      wbuttons.forEach((el) => el.classList.remove("active"));
+      selectedCategory = event.target.dataset.category;
+      event.target.classList.add("active");
+      createRow();
+    })
+  );
+  // SUBMİT
   const tableBody = document.getElementById("task-app_table_body");
   const form = document.querySelector(".task-app__form");
   form.addEventListener("submit", (event) => {
@@ -108,9 +119,21 @@ addEventListener("DOMContentLoaded", (event) => {
     form.reset();
     createRow();
   });
+  //CreateRow
   function createRow(data) {
     tableBody.replaceChildren();
     dataTasks.forEach((task) => {
+      // Data filter category..
+
+      if (selectedCategory == "all") {
+      } else if (selectedCategory == "waiting") {
+        if (task.completed) return;
+      } else {
+        if (!task.completed) return;
+      }
+
+      // defines...
+
       const row = document.createElement("tr");
       const tdTitle = document.createElement("td");
       const tdDesc = document.createElement("td");
@@ -129,6 +152,7 @@ addEventListener("DOMContentLoaded", (event) => {
       actionDelete.innerText = "Delete ";
       actionDone.innerText = "Done";
 
+      // DONE-DELETE START
       actionDelete.onclick = function (event) {
         const index = dataTasks.find((a) => {
           return a.id === task.id;
@@ -146,6 +170,7 @@ addEventListener("DOMContentLoaded", (event) => {
         row.style.textDecoration = "line-through";
       }
 
+      // DONE-DELETE END
       tdTitle.innerText = task.title.toUpperCase();
       tdDesc.innerText = task.desc;
       tdCreated.innerText = task.created;
@@ -171,10 +196,4 @@ addEventListener("DOMContentLoaded", (event) => {
     });
   }
   createRow();
-
-  const completedButton = document.getElementById("completed-button");
-  completedButton.addEventListener("click", function () {
-    const completedTasks = dataTasks.filter((task) => task.completed);
-    createRow(completedTasks);
-  });
 });
